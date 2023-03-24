@@ -158,11 +158,13 @@ class SUNRGBDDataset(Dataset):
         img_info = self.img_infos[idx]
         ann_info = self.get_ann_info(idx)
         results = dict(img_info=img_info, ann_info=ann_info)
+        '''
         print(img_info)
         print("")
         print(ann_info)
         print("")
         print(results)
+        '''
         self.pre_pipeline(results)
         return self.pipeline(results)
 
