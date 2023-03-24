@@ -10,7 +10,7 @@ train_pipeline = [
     dict(type='RandomCrop', crop_size=(416, 544)),
     dict(type='Normalize', **img_norm_cfg),
     dict(type='Collect', 
-         keys=['img', 'depth_gt'], 
+         keys=['img', 'ann_info'], 
          meta_keys=('filename', 'ori_filename', 'ori_shape',
                     'img_shape', 'pad_shape', 'scale_factor', 
                     'img_norm_cfg')),
