@@ -13,7 +13,7 @@ train_pipeline = [
          keys=['img', 'depth_gt'], 
          meta_keys=('filename', 'ori_filename', 'ori_shape',
                     'img_shape', 'pad_shape', 'scale_factor', 
-                    'img_norm_cfg', 'cam_intrinsic')),
+                    'img_norm_cfg')),
 ]
 test_pipeline = [
     dict(type='LoadImageFromFile'),
@@ -30,7 +30,7 @@ test_pipeline = [
                  keys=['img'],
                  meta_keys=('filename', 'ori_filename', 'ori_shape',
                             'img_shape', 'pad_shape', 'scale_factor', 
-                            'img_norm_cfg', 'cam_intrinsic')),
+                            'img_norm_cfg')),
         ])
 ]
 
@@ -44,7 +44,7 @@ eval_pipeline = [
          keys=['img'],
          meta_keys=('filename', 'ori_filename', 'ori_shape',
                     'img_shape', 'pad_shape', 'scale_factor', 
-                    'img_norm_cfg', 'cam_intrinsic')),
+                    'img_norm_cfg')),
 ]
 
 data = dict(
