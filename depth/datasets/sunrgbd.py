@@ -172,6 +172,9 @@ class SUNRGBDDataset(Dataset):
 
         img_info = self.img_infos[idx]
         results = dict(img_info=img_info)
+        print(img_info)
+        print("")
+        print(results)
         self.pre_pipeline(results)
         return self.pipeline(results)
 

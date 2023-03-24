@@ -203,10 +203,7 @@ class Collect(object):
             img_meta[key] = results[key]
         data['img_metas'] = DC(img_meta, cpu_only=True)
         for key in self.keys:
-            try:
-                data[key] = results[key]
-            except Exception as e:
-                NotImplemented
+            data[key] = results[key]
         return data
 
     def __repr__(self):
