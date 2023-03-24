@@ -7,7 +7,6 @@ img_norm_cfg = dict(
 crop_size= (416, 544)
 train_pipeline = [
     dict(type='LoadImageFromFile'),
-    dict(type='NYUCrop', depth=True),
     dict(type='RandomCrop', crop_size=(416, 544)),
     dict(type='Normalize', **img_norm_cfg),
     dict(type='Collect', 
