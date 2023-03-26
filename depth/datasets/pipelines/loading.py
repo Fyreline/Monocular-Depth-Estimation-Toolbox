@@ -79,6 +79,9 @@ class DepthLoadAnnotations(object):
 
         depth_gt = np.asarray(Image.open(filename),
                               dtype=np.float32) / results['depth_scale']
+        #print(filename)
+        #print("")
+        #print(depth_gt)
 
         results['depth_gt'] = depth_gt
         results['depth_ori_shape'] = depth_gt.shape
